@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+
 </head>
 <body>
 
-<%= yield %>
+	<%= render 'layouts/header' %>
+
+	<div class="container">
+		<!--<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+		<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+		<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+		<blockquote>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  		<small>Someone famous <cite title="Source Title">Source Title</cite></small>
+		</blockquote>
+		-->
+
+		<%= yield %>
+	</div>
+
+	<%= render 'layouts/footer' %>
+
 
 </body>
 </html>
